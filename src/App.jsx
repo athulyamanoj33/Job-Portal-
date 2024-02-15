@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+
 import JobPostPage from "./pages/JobPostPage";
 import ApplyJobPage from "./pages/ApplyJobPage";
+
+import AppliedJobPage from "./pages/AppliedJobPage";
+import ChatPage from "./pages/ChatPage";
 
 
 function App() {
@@ -12,8 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage/>}/>
       <Route path="/jobpost" element={<JobPostPage/>}/>
-      <Route path="/Login" element={<LoginPage/>}/>
-      <Route path="Login/signup" element={<SignupPage/>}/>
+      <Route path="/appliedjob" element={<AppliedJobPage/>}/>
+      <Route path="/chat" element={<ChatPage/>}/>
       <Route path="/applyjob/:id" element={<ApplyJobPage/>}/>
     </Routes>
     

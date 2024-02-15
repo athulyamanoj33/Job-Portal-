@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id":"0" ,
         "company_logo": "https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg",
         "job_title": "Sr. Software Engineer",
         "company_name": "Google LLC",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "id": 2,
+        "id": "1",
         "company_logo": "https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg",
         "job_title": "Solution Architect",
         "company_name": "Airbnb",
@@ -36,7 +36,7 @@
         }
     },
     {
-        "id": 3,
+        "id": "2",
         "company_logo": "https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg",
         "job_title": "Dev Ops Engineer",
         "company_name": "Netflix",
@@ -54,7 +54,7 @@
         }
     },
     {
-        "id": 4,
+        "id": "3",
         "company_logo": "https://www.logo.wine/a/logo/Planet_Labs/Planet_Labs-Logo.wine.svg",
         "job_title": "Data Engineer",
         "company_name": "Planet",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "id": 5,
+        "id": "4",
         "company_logo": "https://www.logo.wine/a/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Wordmark-Red-Logo.wine.svg",
         "job_title": "Industrial Engineer",
         "company_name": "Tesla",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "id": 6,
+        "id": "5",
         "company_logo": "https://www.logo.wine/a/logo/Stripe_(company)/Stripe_(company)-Logo.wine.svg",
         "job_title": "Product Manager",
         "company_name": "Stripe",
@@ -108,7 +108,7 @@
         }
     },
     {
-        "id": 7,
+        "id": "6",
         "company_logo": "https://www.logo.wine/a/logo/Walmart/Walmart-Logo.wine.svg",
         "job_title": "Automation Engineering",
         "company_name": "Walmart",
@@ -126,7 +126,7 @@
         }
     },
     {
-        "id": 8,
+        "id": "7",
         "company_logo": "https://www.logo.wine/a/logo/Snowflake_Inc./Snowflake_Inc.-Logo.wine.svg",
         "job_title": "Cloud Services Engineering",
         "company_name": "Snowflake_Inc",
@@ -144,7 +144,7 @@
         }
     },
     {
-        "id": 9,
+        "id": "8",
         "company_logo": "https://www.logo.wine/a/logo/Meta_Platforms/Meta_Platforms-Logo.wine.svg",
         "job_title": "Technical Program Manager",
         "company_name": "Meta",
@@ -162,7 +162,7 @@
         }
     },
     {
-        "id": 10,
+        "id": "9",
         "company_logo": "https://www.logo.wine/a/logo/Amazon_(company)/Amazon_(company)-Logo.wine.svg",
         "job_title": "Site Reliability Engineer",
         "company_name": "Amazon",

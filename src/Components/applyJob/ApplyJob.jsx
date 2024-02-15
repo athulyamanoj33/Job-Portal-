@@ -21,20 +21,36 @@ function ApplyJob() {
       .get("/company.json")
 
       .then((res) => {
-        setDetails(res.data);
+        setDetails(res.data?.filter((x) => x.id == id)[0]);
       });
   }, [id]);
-  console.log(details[0]);
+  console.log(details);
 
-  const handleApplyBtn = () => {
-    toast.success("Successfully applied");
+  const handleApplyBtn = (item) => {
+    let newJob = {};
+    let prevJob = JSON.parse(localStorage.getItem("jobs"));
+
+    let searchedJob = prevJob?.find((data) => data.id == item.id);
+    if (!searchedJob) {
+      if (!prevJob) {
+        newJob = [item];
+        localStorage.setItem("jobs", JSON.stringify(newJob));
+        toast.success("Successfully applied");
+      } else {
+        newJob = [...prevJob, item];
+        localStorage.setItem("jobs", JSON.stringify(newJob));
+        toast.success("Successfully applied");
+      }
+    } else {
+      toast.error("Already applied");
+    }
   };
+ 
 
   return (
     <div className="h-screen w-screen ">
-      <h1 className="text-white ml-10">{id}</h1>
       <h1 className="text-5xl text-center bg-gradient-to-r from-indigo-500 to-indigo-800 bg-clip-text text-transparent p-2 mb-8">
-        {details.company_name}Job Details
+        {details?.company_name}-Job Details
       </h1>
       <div className="md:flex px-16 gap-6 text-white">
         <div className="left w-11/12 text-lg">
@@ -44,15 +60,15 @@ function ApplyJob() {
           </h1>
           <h1 className="mt-4 tracking-wide">
             <span className="font-bold ">Job Responsibility:</span>{" "}
-            {details.job_responsibility}
+            {details?.job_responsibility}
           </h1>
           <h1 className="font-bold mt-4 tracking-wide">
             Educational Requirements:
           </h1>
-          <p className="tracking-wide">{details.educational_requirements}</p>
+          <p className="tracking-wide">{details?.educational_requirements}</p>
           <h1 className="my-4 tracking-wide">
             <span className="font-bold ">Experiences:</span>{" "}
-            {details.experiences}
+            {details?.experiences}
           </h1>
         </div>
         <div className="md:w-2/4">
@@ -64,14 +80,14 @@ function ApplyJob() {
               <CurrencyDollarIcon className="h-6 w-6 text-blue-500" />
               <div>
                 <span className="font-bold ml-2 ">Salary: </span>
-                {details.salary}
+                {details?.salary}
               </div>
             </p>
             <p className="flex mt-2 md:items-center">
               <CalendarDaysIcon className="h-6 w-6 text-blue-500" />
               <div>
                 <span className="font-bold ml-2">Job Title: </span>
-                {details.job_title}
+                {details?.job_title}
               </div>
             </p>
 
@@ -81,14 +97,14 @@ function ApplyJob() {
               <PhoneIcon className="h-6 w-6 text-blue-500" />
               <div>
                 <span className="font-bold ml-2">Phone: </span>
-                {details.contact_information?.phone}
+                {details?.contact_information?.phone}
               </div>
             </p>
             <p className="flex mt-2 items-center">
               <EnvelopeIcon className="h-6 w-6 text-blue-500" />
               <div>
                 <span className="font-bold ml-2">Email: </span>
-                {details.contact_information?.email}
+                {details?.contact_information?.email}
               </div>
             </p>
 
